@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Anonymous Campus</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <div class="dashboard-header">
+      <h1>🎓 Dashboard</h1>
+      <div class="header-actions">
+        <button class="profile-btn" onclick="goToProfile()">👤 Profile</button>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+      </div>
+    </div>
+
+    <div class="post-creator">
+      <h2>Share Your Thoughts</h2>
+      <textarea id="postContent" placeholder="What's on your mind? (anonymous posting)"></textarea>
+      
+      <div class="tag-section">
+        <label>Add Tags (max 5):</label>
+        <div class="tag-buttons">
+          <button class="tag-btn" onclick="toggleTag('Sport')">Sport</button>
+          <button class="tag-btn" onclick="toggleTag('Tech')">Tech</button>
+          <button class="tag-btn" onclick="toggleTag('Academic')">Academic</button>
+          <button class="tag-btn" onclick="toggleTag('Social')">Social</button>
+          <button class="tag-btn" onclick="toggleTag('Other')">Other</button>
+        </div>
+        <div id="selectedTags" class="selected-tags"></div>
+      </div>
+      
+      <button onclick="createPost()">Post Anonymously</button>
+    </div>
+
+    <div id="posts"></div>
+    <div class="empty-state" id="emptyState">
+      <p>No posts yet. Be the first to share! 📝</p>
+    </div>
+  </div>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "anonymous-campus",
+  "version": "1.0.0",
+  "description": "Anonymous University Communication Platform",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.0",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.6.3"
+  }
+}
