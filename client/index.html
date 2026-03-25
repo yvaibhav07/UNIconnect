@@ -4,33 +4,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anonymous Campus</title>
+  <title>UniCon - Anonymous Campus Community</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>🎓 Anonymous Campus</h1>
-    
-    <div class="auth-container">
-      <h2>Create Account</h2>
-      <div class="form-group">
-        <input id="regEmail" placeholder="University Email" type="email" required>
-        <input id="regPass" type="password" placeholder="Create Password" required>
-        <button onclick="register()">Register</button>
+  <header class="site-header">
+    <div class="container header-wrap">
+      <a class="brand" href="index.html">UniCon</a>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a class="btn btn-outline" href="login.html">Login</a>
+        <a class="btn btn-primary" href="signup.html">Sign Up</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Hero section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1>Speak Freely. Connect Securely.</h1>
+          <p>UniCon is a free anonymous campus platform where students share ideas, ask questions, and connect over common interests without fear.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="signup.html">Join the Community</a>
+            <a class="btn btn-outline" href="login.html">Existing Student</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="feature-badge">Trusted by 50K+ Students</div>
+          <div class="feature-card">Instant anonymous posts</div>
+          <div class="feature-card">Real-time feedback</div>
+          <div class="feature-card">Moderation tools & safe space</div>
+        </div>
       </div>
+    </section>
 
-      <div class="divider">Already have an account? Sign in below</div>
-      
+    <section id="features" class="section features">
+      <div class="container">
+        <h2>Why UniCon?</h2>
+        <div class="feature-grid">
+          <article class="feature-item">
+            <h3>100% Anonymous</h3>
+            <p>Post and discuss sensitive topics without connecting your identity.</p>
+          </article>
+          <article class="feature-item">
+            <h3>Campus-wide Reach</h3>
+            <p>See what peers are saying across departments and dorms, instantly.</p>
+          </article>
+          <article class="feature-item">
+            <h3>Moderated & Safe</h3>
+            <p>Community guidelines plus reporting help keep conversations respectful.</p>
+          </article>
+          <article class="feature-item">
+            <h3>Easy Sharing</h3>
+            <p>Tag your posts and find threads with an intuitive interface.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-      <h2>Sign In</h2>
-      <div class="form-group">
-        <input id="logEmail" placeholder="Email" type="email" required>
-        <input id="logPass" type="password" placeholder="Password" required>
-        <button onclick="login()">Login</button>
+    <section id="how-it-works" class="section how-it-works">
+      <div class="container">
+        <h2>How It Works</h2>
+        <ol class="steps">
+          <li><strong>Create an account:</strong> Use only your school email (no personal info required).</li>
+          <li><strong>Post anonymously:</strong> Share updates, questions, and ideas.</li>
+          <li><strong>Engage safely:</strong> Vote, comment, and follow topics.</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>UniCon</h3>
+        <p>Anonymous campus community for students to share, support, and stay informed.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+      </div>
+      <div>
+        <p>&copy; 2026 UniCon. All rights reserved.</p>
       </div>
     </div>
-  </div>
-
-  <script src="js/main.js"></script>
+  </footer>
 </body>
 </html>
