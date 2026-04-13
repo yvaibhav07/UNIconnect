@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile - Anonymous Campus</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <div class="dashboard-header">
+      <h1>👤 Profile</h1>
+      <div class="header-actions">
+        <a href="dashboard.html" class="nav-btn">🎓 Dashboard</a>
+        <a href="friends.html" class="nav-btn">👥 Friends</a>
+        <a href="messages.html" class="nav-btn">💬 Messages</a>
+        <button class="back-btn" onclick="goToDashboard()">← Back</button>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+      </div>
+    </div>
+
+    <div class="profile-container">
+      <div class="profile-card">
+        <div class="profile-header">
+          <div class="profile-avatar">👤</div>
+          <div class="profile-info">
+            <h2 id="profileName">Loading...</h2>
+            <p id="profileRole"></p>
+            <p id="profileJoinDate"></p>
+          </div>
+        </div>
+
+        <div class="profile-stats">
+          <div class="stat-box">
+            <div class="stat-number" id="postsCount">0</div>
+            <div class="stat-label">Posts</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number" id="commentsCount">0</div>
+            <div class="stat-label">Comments</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-posts">
+        <h3>📝 Your Posts</h3>
+        <div id="userPosts" class="posts-list"></div>
+        <div class="empty-state" id="emptyPostsState">
+          <p>You haven't posted anything yet 📝</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>

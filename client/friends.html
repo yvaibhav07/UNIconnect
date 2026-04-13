@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friends - Anonymous Campus</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+                /* ===== FRIENDS PAGE UPGRADE ===== */
+
+        .friends-container {
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 0 16px;
+        }
+
+        /* SECTION CARDS */
+        .friends-section {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 18px;
+        margin-bottom: 18px;
+        box-shadow: var(--shadow-card);
+        transition: all 0.2s ease;
+        }
+
+        .friends-section:hover {
+        box-shadow: var(--shadow-hover);
+        }
+
+        /* HEADINGS */
+        .friends-section h2 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 14px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--border);
+        color: var(--text-main);
+        }
+
+        /* USER CARD */
+        .user-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px;
+        border-radius: var(--radius-sm);
+        background: var(--bg-secondary);
+        border: 1px solid transparent;
+        margin-bottom: 10px;
+        transition: all 0.2s ease;
+        }
+
+        .user-item:hover {
+        background: var(--primary-light);
+        border-color: var(--border-hover);
+        transform: translateY(-1px);
+        }
+
+        /* USER INFO */
+        .user-name {
+        font-weight: 600;
+        font-size: 14px;
+        color: var(--text-main);
+        }
+
+        .user-email {
+        font-size: 12px;
+        color: var(--text-muted);
+        margin-top: 2px;
+        }
+
+        /* ACTIONS */
+        .user-actions {
+        display: flex;
+        gap: 6px;
+        }
+
+        /* BUTTONS (match your main CSS style) */
+        .user-actions button {
+        border-radius: var(--radius-pill);
+        padding: 6px 12px;
+        font-size: 12px;
+        min-height: 28px;
+        }
+
+        /* PRIMARY */
+        .btn-primary {
+        background: var(--primary);
+        border: 1px solid var(--primary);
+        color: white;
+        }
+
+        .btn-primary:hover {
+        background: var(--primary-hover);
+        }
+
+        /* SUCCESS */
+        .btn-success {
+        background: var(--success);
+        border: 1px solid var(--success);
+        }
+
+        .btn-success:hover {
+        background: #05b889;
+        }
+
+        /* DANGER */
+        .btn-danger {
+        background: #ef4444;
+        border: 1px solid #ef4444;
+        }
+
+        .btn-danger:hover {
+        background: #dc2626;
+        }
+
+        /* SECONDARY */
+        .btn-secondary {
+        background: var(--bg-secondary);
+        border: 1px solid var(--border);
+        color: var(--text-muted);
+        }
+
+        .btn-secondary:hover {
+        background: var(--primary-light);
+        color: var(--primary);
+        border-color: var(--primary);
+        }
+
+        /* SEARCH INPUT */
+        #searchInput {
+        width: 100%;
+        padding: 10px 14px;
+        border-radius: var(--radius-pill);
+        border: 1.5px solid var(--border);
+        background: var(--bg-main);
+        font-size: 14px;
+        margin-bottom: 12px;
+        transition: all 0.2s ease;
+        }
+
+        #searchInput:focus {
+        border-color: var(--primary);
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(67,97,238,0.12);
+        background: white;
+        }
+
+        /* EMPTY STATE */
+        .empty-message {
+        text-align: center;
+        color: var(--text-muted);
+        padding: 24px;
+        font-size: 14px;
+        }
+
+        /* NAV LINKS FIX */
+        .nav-links {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+        }
+
+        .nav-links a {
+        background: var(--primary-light);
+        border: 1px solid var(--primary);
+        color: var(--primary);
+        padding: 8px 14px;
+        border-radius: var(--radius-pill);
+        font-size: 13px;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        }
+
+        .nav-links a:hover {
+        background: var(--primary);
+        color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="friends-container">
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="friends.html">Friends</a>
+            <a href="messages.html">Messages</a>
+            <a href="profile.html">Profile</a>
+            <a href="login.html" onclick="logout()">Logout</a>
+        </div>
+
+        <!-- Friends List -->
+        <div class="friends-section">
+            <h2>👥 My Friends</h2>
+            <div id="friendsList" class="empty-message">Loading friends...</div>
+        </div>
+
+        <!-- Friend Requests -->
+        <div class="friends-section">
+            <h2>📬 Friend Requests</h2>
+            <div id="friendRequests" class="empty-message">Loading requests...</div>
+        </div>
+
+        <!-- Search Users -->
+        <div class="friends-section">
+            <h2>🔍 Find Friends</h2>
+            <input type="text" id="searchInput" placeholder="Search by anonymous name..." style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px;">
+            <div id="searchResults"></div>
+        </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/friends.js"></script>
+</body>
+</html>
