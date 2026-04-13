@@ -1,5 +1,5 @@
 
-# Anonymous University Communication Platform
+# UniCon: The Anonymous University Communication Platform
 
 & "C:\Program Files\MongoDB\Server\8.2\bin\mongod.exe" --dbpath C:\data\db
 
