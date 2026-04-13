@@ -84,6 +84,7 @@ router.get("/profile/:userId", async (req, res) => {
     }
 });
 
+<<<<<<< HEAD
 // SEARCH USERS
 router.get("/search", async (req, res) => {
     try {
@@ -104,4 +105,6 @@ router.get("/search", async (req, res) => {
     }
 });
 
+=======
+>>>>>>> 2991f2d95e751c5f5365365daf6baddc2e756510
 module.exports = router;
